@@ -1,0 +1,7 @@
+Concatenable<T> = {
+  +(T other) : T
+}
+
+MyNumber&Concatenable<MyNumber>[value : int] = {
+  +(other) = MyNumber(value + other.value)
+}

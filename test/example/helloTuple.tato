@@ -1,0 +1,3 @@
+val tuple = ["test", 1, 5f]
+print(tuple.size())
+print(tuple[0])

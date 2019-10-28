@@ -1,0 +1,4 @@
+Indexed<T> = {
+  [(index)] => T
+  size => int
+}

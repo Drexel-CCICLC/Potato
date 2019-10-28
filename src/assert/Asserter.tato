@@ -1,0 +1,7 @@
+single Asserter = {
+  fail(value) = throw value
+
+  assert(Indexed value0, Indexed value1) = {
+
+  }
+}
