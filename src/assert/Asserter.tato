@@ -6,7 +6,7 @@ single Asserter = {
     val size0 = value0
     val size1 = value1
     val builder = StringBuilder
-      + "Sizes of indexed ("
+      + "Sizes ("
       + size0 + ", "
       + size1 + ") are not equal."
     failIfFalse(size0=size1, builder)
