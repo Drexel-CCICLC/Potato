@@ -9,10 +9,12 @@ single Asserter = {
     failIfFalse(value0 = value1, builder)
   }
 
-  assert<T>[Indexed<?&T> value0, Indexed<?&T> value1] = {
-    val size0 = value0
-    val size1 = value1
+  assert<T, R>[Indexed<T> value0, Indexed<R> value1] = {
+    val size0 = value0.size()
+    val size1 = value1.size()
     assert(size0, size1)
-    (value0 * value1).forEach(assert)
+
+    value0.merge(value1)
+          .forEach(assert)
   }
 }

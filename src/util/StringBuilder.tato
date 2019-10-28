@@ -1,5 +1,5 @@
 StringBuilder[string value] = {
   ~[] = ("")
   +[string value] = StringBuilder(this.value + value)
-  size = value.size()
+  size = value.size
 }
