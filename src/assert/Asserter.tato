@@ -1,7 +1,14 @@
 single Asserter = {
-  fail(value) = throw value
+  fail[value] = throw value
+  failIfFalse[state, message] = if(!state) fail(message)
 
-  assert(Indexed value0, Indexed value1) = {
-
+  assert[Indexed value0, Indexed value1] = {
+    val size0 = value0
+    val size1 = value1
+    val builder = StringBuilder
+      + "Sizes of indexed ("
+      + size0 + ", "
+      + size1 + ") are not equal."
+    failIfFalse(size0=size1, builder)
   }
 }
