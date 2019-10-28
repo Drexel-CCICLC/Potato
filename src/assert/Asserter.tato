@@ -1,14 +1,18 @@
 single Asserter = {
-  fail[value] = throw value
-  failIfFalse[state, message] = if(!state) fail(message)
+  failIfFalse[state, message] = if(!state) throw message
 
-  assert[Indexed value0, Indexed value1] = {
+  assert[value0, value1] = {
+    val builder = StringBuilder(value0)
+      + " and "
+      + value1
+      + " are not equal."
+    failIfFalse(value0 = value1, builder)
+  }
+
+  assert<T>[Indexed<?&T> value0, Indexed<?&T> value1] = {
     val size0 = value0
     val size1 = value1
-    val builder = StringBuilder
-      + "Sizes ("
-      + size0 + ", "
-      + size1 + ") are not equal."
-    failIfFalse(size0=size1, builder)
+    assert(size0, size1)
+    (value0 * value1).forEach(assert)
   }
 }
