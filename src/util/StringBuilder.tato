@@ -1,5 +1,4 @@
-StringBuilder[string value] = {
-  ~[] = ("")
-  +[string value] = StringBuilder(this.value + value)
+StringBuilder(string value) = {
   size = value.size
+  + ()
 }

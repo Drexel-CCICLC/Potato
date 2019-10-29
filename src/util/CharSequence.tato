@@ -1,0 +1,23 @@
+with Populator.populate
+
+CharSequence<T&CharSequence>(int[] data) = {
+  +(CharSequence other) T
+  -(CharSequence other) T
+  %(CharSequence other) T
+  /(CharSequence other) T[]
+
+  [(int index)] = data[index]
+  index(int value, int data) = data.index
+  index(int value) = data.index
+  size = data.size
+
+  indexOf(int value) int = {
+    populate(0, size)
+      .map((index) => [int, int] = [index, data[index]])
+      .filter()
+    val size = data.size()
+    for(i in size){
+      if(data[i] = value) return i
+    }
+  }
+}
