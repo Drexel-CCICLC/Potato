@@ -1,6 +1,6 @@
 ArrayList<T>&Indexed<T, ArrayList<T>>[T... values] = {
   +(T other) = (values.copy(size + 1)
-          .index(size + 1))
+          .index(size + 1, other))
   [(int index)] = values[index]
   size = values.size
 }
