@@ -11,8 +11,7 @@ function construct(){
 }
 
 function +(current, other){
-  var otherValue = values[other];
-  values[current] += otherValue;
+  values[current] += values[other];
 }
 
 function size(current) {
