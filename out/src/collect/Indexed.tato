@@ -1,0 +1,7 @@
+Indexed<T, C&Indexed<T>> = {
+  [(index)] => T
+  index(int index, T value) = [index] = value
+  merge<R>[Indexed<R, C>] => C&Indexed<[T, R]>
+  copy => C
+  size => int
+}
