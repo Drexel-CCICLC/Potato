@@ -1,0 +1,8 @@
+String&CharSequence<String>(int[] values) = {
+  +(CharSequence other) String = (values
+    .copy(other.size)
+    .move(other.size, other)
+  )
+
+  -(CharSequence other) String = (values
+}

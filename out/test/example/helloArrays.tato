@@ -8,4 +8,4 @@ array[0] = 21
 array.index(0, 21)
 print(array[0])
 
-val array = var string[6]
+val array = var 6[]

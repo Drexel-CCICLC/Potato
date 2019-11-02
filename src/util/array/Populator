@@ -1,0 +1,10 @@
+single Populator = {
+  rangeStream(int from, int to) Stream<int> = Stream(range(from, to))
+
+  range(int from, int to) int[] = {
+    val size = to - from
+    val array = var int[size]
+    for(i in size) array[i] = to + i
+    return array
+  }
+}
